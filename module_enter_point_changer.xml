@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_enter_point_changer" default="compile.module.enter_point_changer">
+  <dirname property="module.enter_point_changer.basedir" file="${ant.file.module_enter_point_changer}"/>
+  
+  <property name="module.jdk.home.enter_point_changer" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.enter_point_changer" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.enter_point_changer" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.enter_point_changer" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="enter_point_changer.output.dir" value="${module.enter_point_changer.basedir}/out/production/ENTER_POINT_CHANGER"/>
+  <property name="enter_point_changer.testoutput.dir" value="${module.enter_point_changer.basedir}/out/test/ENTER_POINT_CHANGER"/>
+  
+  <path id="enter_point_changer.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="enter_point_changer.module.production.classpath">
+    <path refid="${module.jdk.classpath.enter_point_changer}"/>
+    <fileset dir="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+  </path>
+  
+  <path id="enter_point_changer.runtime.production.module.classpath">
+    <pathelement location="${enter_point_changer.output.dir}"/>
+    <fileset dir="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+  </path>
+  
+  <path id="enter_point_changer.module.classpath">
+    <path refid="${module.jdk.classpath.enter_point_changer}"/>
+    <pathelement location="${enter_point_changer.output.dir}"/>
+    <fileset dir="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+  </path>
+  
+  <path id="enter_point_changer.runtime.module.classpath">
+    <pathelement location="${enter_point_changer.testoutput.dir}"/>
+    <pathelement location="${enter_point_changer.output.dir}"/>
+    <fileset dir="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-collections4-4.1.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+    <pathelement location="${basedir}/../../../../home/nanobreaker/Загрузки/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.enter_point_changer">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.enter_point_changer">
+    <patternset refid="excluded.from.module.enter_point_changer"/>
+  </patternset>
+  
+  <path id="enter_point_changer.module.sourcepath">
+    <dirset dir="${module.enter_point_changer.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.enter_point_changer" depends="compile.module.enter_point_changer.production,compile.module.enter_point_changer.tests" description="Compile module ENTER_POINT_CHANGER"/>
+  
+  <target name="compile.module.enter_point_changer.production" depends="register.custom.compilers" description="Compile module ENTER_POINT_CHANGER; production classes">
+    <mkdir dir="${enter_point_changer.output.dir}"/>
+    <javac2 destdir="${enter_point_changer.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.enter_point_changer}/javac">
+      <compilerarg line="${compiler.args.enter_point_changer}"/>
+      <bootclasspath refid="enter_point_changer.module.bootclasspath"/>
+      <classpath refid="enter_point_changer.module.production.classpath"/>
+      <src refid="enter_point_changer.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.enter_point_changer"/>
+    </javac2>
+    
+    <copy todir="${enter_point_changer.output.dir}">
+      <fileset dir="${module.enter_point_changer.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.enter_point_changer.tests" depends="register.custom.compilers,compile.module.enter_point_changer.production" description="compile module ENTER_POINT_CHANGER; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.enter_point_changer" description="cleanup module">
+    <delete dir="${enter_point_changer.output.dir}"/>
+    <delete dir="${enter_point_changer.testoutput.dir}"/>
+  </target>
+</project>
